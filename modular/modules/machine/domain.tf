@@ -3,7 +3,7 @@ resource "libvirt_domain" "machine" {
   name   = var.machine_name[count.index]
   vcpu   = var.vcpu
   memory = var.memory
-#  qemu_agent = true
+  qemu_agent = true
 
   cloudinit = libvirt_cloudinit_disk.commoninit[count.index].id
 
@@ -13,6 +13,7 @@ resource "libvirt_domain" "machine" {
 
   network_interface {
     network_id = var.machine_network_id
+#    network_name = "ten_network"
     wait_for_lease = true
   }
 

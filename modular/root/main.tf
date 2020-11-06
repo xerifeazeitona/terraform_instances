@@ -5,7 +5,7 @@ module "net_test" {
 
 module "machine_test" {
     source = "../modules/machine"
-    os_image_path = "../CentOS-7-x86_64-GenericCloud.qcow2c"
+    os_image_path = "../../CentOS-7-x86_64-GenericCloud.qcow2c"
     volume_pool = "kvm-pool"
     disk_size = 1024*1024*1024*8
     machine_name = ["my_machine"]

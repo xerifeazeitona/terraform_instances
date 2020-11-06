@@ -1,5 +1,6 @@
 resource "libvirt_network" "network" {
     name      = var.network_name
     mode      = "nat"
-    addresses = ["10.0.1.0/24"]
+    domain    = "${var.network_name}.local"
+    addresses = ["10.0.2.0/24"]
 }
