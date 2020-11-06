@@ -1,5 +1,15 @@
+variable "disk_size" { 
+    #1024*1024*1024 = 1G
+    default = 1024*1024*1024*5
+}
+
+variable "os_image_path" {}
+
+variable "volume_pool" {}
+
 variable "machine_name" {
-    default = "dummy"
+    type = list(string)
+    default = ["dummy_vm"]
 }
 
 variable "vcpu" {

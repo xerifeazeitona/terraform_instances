@@ -27,3 +27,4 @@ terraform.rc
 # Image files
 *.img
 *.qcow2
+*.qcow2c
